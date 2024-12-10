@@ -1,8 +1,16 @@
-import { Button } from "./_components/ui/button";
+import { UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
-const Home = () => {
+const Home = async () => {
+  const {userId} = await auth()
+  if (!userId) {
+    redirect("/login")
+  }
   return ( 
-    <Button> buton</Button>
+    <div className="h-full flex justify-center items-center">
+      <UserButton showName />
+    </div>
   );
 }
  
