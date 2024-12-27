@@ -24,7 +24,7 @@ const Navbar = () => {
                         pathname === "/transactions" ? "text-primary font-bold" : "text-muted-foreground"
                     }
                 >
-                    Transacoes
+                    Transações
                 </Link>
                 <Link 
                     href="/subscription"
