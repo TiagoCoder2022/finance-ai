@@ -5,7 +5,7 @@ import { auth, clerkClient } from "@clerk/nextjs/server"
 import OpenAi from "openai"
 import { GenerateAiReporterSchema, generateAiReporterSchema } from "./schema"
 
-export const generateAiReporter = async ({month}: GenerateAiReporterSchema) => {
+export const generateAiReport = async ({month}: GenerateAiReporterSchema) => {
     generateAiReporterSchema.parse({month})
     const { userId } = auth()
     if (!userId) {
