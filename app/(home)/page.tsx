@@ -32,25 +32,30 @@ const Home = async ({searchParams: { month }}: HomeProps) => {
   return ( 
     <>
       <Navbar />
-      <div className="p-6 h-full space-y-6 flex flex-col overflow-hidden">
-        <div className="flex justify-between">
-          <h1 className="text-2xl font-bold">Dashboard</h1>
-          <div className="flex items-center gap-3">
+      <div className="p-6 h-full space-y-4 md:space-y-6 flex flex-col md:overflow-hidden">
+        <div className="md:flex md:justify-between">
+          <h1 className="mb-4 md:mb-0 text-xl md:text-2xl font-bold">Dashboard</h1>
+          <div className="flex justify-between md:items-center gap-3">
             <AiReportButton month={month} hasPremiumPlan={user.publicMetadata.subscriptionPlan === "premium"}/>
             <TimeSelect />
           </div>
         </div>
-        <div className="grid grid-cols-[2fr,1fr] h-full gap-6 overflow-hidden">
-          <div className="flex flex-col gap-6 overflow-hidden">
+        <div className="flex flex-col md:grid md:grid-cols-[2fr,1fr] h-full md:gap-6 gap-3 md:overflow-hidden">
+          <div className="flex flex-col gap-3 md:gap-6 md:overflow-hidden">
             <SummaryCards month={month} {...dashboard} userCanAddTransaction={userCanAddTransaction}/>
-            <div className="grid grid-cols-3 h-full grid-rows-1 gap-6">
+            <div className="block md:hidden lg:hidden xl:hidden">
+              <LastTransactions lastTransactions={dashboard.lastTransactions}/>
+            </div>
+            <div className="flex flex-col md:grid md:grid-cols-3 h-full grid-rows-1 gap-3 md:gap-6">
               <TransactionPieChart {...dashboard}/>
               <ExpensesPerCategory expensesPerCategory={dashboard.totalExpensePerCategory}/>
             </div>
           </div>
-          <LastTransactions lastTransactions={dashboard.lastTransactions}/>
-        </div>        
-      </div>
+          <div className="hidden lg:block">
+            <LastTransactions lastTransactions={dashboard.lastTransactions}/>
+          </div>
+        </div>                        
+      </div>      
     </>
   );
 }

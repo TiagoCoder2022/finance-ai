@@ -11,12 +11,12 @@ interface SummaryCardProps {
 const SummaryCard = ({icon, title, amount, size = 'small', userCanAddTransaction }: SummaryCardProps) => {
     return ( 
         <Card className={`${size === "large" ? "bg-white bg-opacity-5" : ""}`}>
-            <CardHeader className="flex-row items-center gap-4">
+            <CardHeader className="flex-row items-center gap-2 md:gap-4">
                 {icon}
-                <p className={`${size === "small" ? "text-muted-foreground" : "text-white opacity-70"}`}>{title}</p>
+                <p className={`${size === "small" ? "text-sm md:text-base text-muted-foreground" : "text-base md:text-lg text-white opacity-70"}`}>{title}</p>
             </CardHeader>
             <CardContent className="flex justify-between">
-                <p className={`${size === "small" ? "text-2xl" : "text-4xl"} font-bold`}>
+                <p className={`${size === "small" ? " text-base md:text-2xl" : "text-xl md:text-4xl"} font-bold`}>
                     {Intl.NumberFormat("pt-BR", {
                         style: "currency", 
                         currency: "BRL"
