@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface PercentageItemProps {
   icon: ReactNode;
   title: string;
-  value: number;
+  value: number | 0;
 }
 
 const PercentageItem = ({ icon, title, value }: PercentageItemProps) => {
@@ -15,7 +15,7 @@ const PercentageItem = ({ icon, title, value }: PercentageItemProps) => {
         </div>
         <p className="text-sm text-muted-foreground">{title}</p>
       </div>
-      <p className="text-sm font-bold">{value}%</p>
+      <p className="text-sm font-bold">{value ? value : 0}%</p>
     </div>
   );
 };
