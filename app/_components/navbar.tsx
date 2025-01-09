@@ -8,9 +8,19 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui
 import { Button } from "./ui/button";
 import { ArrowRightLeft, CreditCardIcon, MenuIcon, TrendingUpIcon } from "lucide-react";
 import { Separator } from "./ui/separator";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
     const pathname = usePathname()
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
+    if (!isMounted) {        
+        return null
+    }
     return (
         <> 
             <nav className="hidden lg:flex justify-between px-8 py-4 border-b border-solid">
@@ -49,7 +59,7 @@ const Navbar = () => {
                 <Image src="/login.svg" alt="Finance AI" width={173} height={39} />     
 
                 <Sheet>
-                    <SheetTrigger>
+                    <SheetTrigger asChild>
                         <Button
                             size="icon"
                             variant="outline"
