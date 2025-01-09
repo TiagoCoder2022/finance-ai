@@ -56,7 +56,7 @@ export const TransactionColumns: ColumnDef<Transaction>[] = [
     header: "Ações",
     cell: ({row: {original: transaction}}) => {
       return (
-        <div className="sapce-x-1">
+        <div className="space-x-0 md:space-x-1">
           <EditTransactionButton transaction={ transaction }/>
           <Button variant="ghost" size="icon" className="text-muted-foreground">
             <TrashIcon />
