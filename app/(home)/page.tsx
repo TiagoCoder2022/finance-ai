@@ -32,26 +32,26 @@ const Home = async ({searchParams: { month }}: HomeProps) => {
   return ( 
     <>
       <Navbar />
-      <div className="p-6 h-full space-y-4 md:space-y-6 flex flex-col md:overflow-hidden">
-        <div className="md:flex md:justify-between">
-          <h1 className="mb-4 md:mb-0 text-xl md:text-2xl font-bold">Dashboard</h1>
-          <div className="flex justify-between md:items-center gap-3">
+      <div className="p-6 h-full space-y-4 lg:space-y-6 flex flex-col">
+        <div className="lg:flex lg:justify-between">
+          <h1 className="mb-4 lg:mb-0 text-xl lg:text-2xl font-bold">Dashboard</h1>
+          <div className="flex justify-between lg:items-center gap-3">
             <AiReportButton month={month} hasPremiumPlan={user.publicMetadata.subscriptionPlan === "premium"}/>
             <TimeSelect />
           </div>
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-[2fr,1fr] h-full md:gap-6 gap-3 md:overflow-hidden">
-          <div className="flex flex-col gap-3 md:gap-6 md:overflow-hidden">
+        <div className="flex flex-col lg:grid lg:grid-cols-[2fr,1fr] h-full lg:gap-6 gap-3">
+          <div className="flex flex-col gap-3 lg:gap-6 lg:overflow-hidden lg:pb-4">
             <SummaryCards month={month} {...dashboard} userCanAddTransaction={userCanAddTransaction}/>
-            <div className="block md:hidden lg:hidden xl:hidden">
+            <div className="block lg:hidden xl:hidden">
               <LastTransactions lastTransactions={dashboard.lastTransactions}/>
             </div>
-            <div className="flex flex-col md:grid md:grid-cols-3 h-full grid-rows-1 gap-3 md:gap-6">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 h-full grid-rows-1 gap-3 lg:gap-6">
               <TransactionPieChart {...dashboard}/>
               <ExpensesPerCategory expensesPerCategory={dashboard.totalExpensePerCategory}/>
             </div>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden lg:block lg:mb-6 max-h-full">
             <LastTransactions lastTransactions={dashboard.lastTransactions}/>
           </div>
         </div>                        

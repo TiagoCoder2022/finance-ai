@@ -11,19 +11,20 @@ interface SummaryCardProps {
 const SummaryCard = ({icon, title, amount, size = 'small', userCanAddTransaction }: SummaryCardProps) => {
     return ( 
         <Card className={`${size === "large" ? "bg-white bg-opacity-5" : ""}`}>
-            <CardHeader className="flex-row items-center gap-2 md:gap-4">
-                {icon}
-                <p className={`${size === "small" ? "text-sm md:text-base text-muted-foreground" : "text-base md:text-lg text-white opacity-70"}`}>{title}</p>
+            <CardHeader className="flex flex-row justify-between">
+                <div className="flex flex-row items-center text-center gap-2 lg:gap-4 p-0">
+                    {icon}
+                    <p className={`${size === "small" ? "text-sm md:text-base text-muted-foreground" : "text-base md:text-lg text-white opacity-70"}`}>{title}</p>
+                </div>
+                {size === "large" && (<AddTransactionButton userCanAddTransaction={userCanAddTransaction} />)}
             </CardHeader>
-            <CardContent className="flex justify-between">
+            <CardContent>
                 <p className={`${size === "small" ? " text-base md:text-2xl" : "text-xl md:text-4xl"} font-bold`}>
                     {Intl.NumberFormat("pt-BR", {
                         style: "currency", 
                         currency: "BRL"
                     }).format(amount)}
-                </p>
-
-                {size === "large" && (<AddTransactionButton userCanAddTransaction={userCanAddTransaction} />)}
+                </p>                
             </CardContent>
         </Card>
      );

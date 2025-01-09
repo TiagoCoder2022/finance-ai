@@ -9,7 +9,7 @@ interface ExpensesPerCategoryProps {
 }
 const ExpensesPerCategory = ({expensesPerCategory}: ExpensesPerCategoryProps) => {
     return ( 
-        <ScrollArea className="col-span-2 rounded-md border pb-6 h-full">
+        <ScrollArea className="col-span-2 rounded-md border pb-6 mb-4 h-full">
             <CardHeader>
                 <CardTitle className="text-lg md:text-2xl font-bold">Gastos por categoria</CardTitle>
             </CardHeader>
