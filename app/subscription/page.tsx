@@ -22,53 +22,52 @@ const SubscriptionPage = async () => {
     return ( 
         <>
             <Navbar />
-            <div className="p-6 space-y-6">
-                <h1 className="font-bold text-2xl">Assinatura</h1>
-
-                <div className="flex gap-6">
-                    <Card className="w-[450px]">                        
+            <h1 className="p-6 font-bold text-2xl">Assinatura</h1>
+            <div className="space-y-6 mx-auto">
+                <div className="flex flex-col md:flex-row gap-6">
+                    <Card className="w-[350px] md:w-[450px]">                        
                         <CardHeader className="border-b border-solid py-8 relative">
                             {!hasPrimiumPlan && (
                                 <Badge className="absolute top-12 left-4 bg-primary/10 text-primary">Ativo</Badge>
                             )}                            
-                            <h2 className="text-center text-2xl font-semibold">Plano Básico</h2>
+                            <h2 className="text-center text-xl md:text-2xl font-semibold">Plano Básico</h2>
                             <div className="flex items-center gap-3 justify-center">
-                                <span className="text-4xl">R$</span>
-                                <span className="font-semibold text-6xl">0</span>
-                                <div className="text-muted-foreground text-2xl">/mês</div>
+                                <span className="text-2xl md:text-4xl">R$</span>
+                                <span className="font-semibold text-4xl md:text-6xl">0</span>
+                                <div className="text-muted-foreground text-xl md:text-2xl">/mês</div>
                             </div>
                         </CardHeader>
                         <CardContent className="space-y-6 py-8">
                             <div className="flex items-center gap-2">
                                 <CheckIcon className="text-primary" />
-                                <p>Apenas 10 transações por mês ({currentMonthTransactions}/10)</p>
+                                <p className="text-sm md:text-base">Apenas 10 transações por mês ({currentMonthTransactions}/10)</p>
                             </div>
                             <div className="flex items-center gap-2">
                                 <XIcon />
-                                <p>Relatórios de IA</p>
+                                <p className="text-sm md:text-base">Relatórios de IA</p>
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="w-[450px]">
+                    <Card className="w-[350px] md:w-[450px]">
                         <CardHeader className="border-b border-solid py-8 relative">
                             {hasPrimiumPlan && (
                                 <Badge className="absolute top-12 left-4 bg-primary/10 text-primary">Ativo</Badge>
                             )}
-                            <h2 className="text-center text-2xl font-semibold">Plano Primium</h2>
+                            <h2 className="text-center text-xl md:text-2xl font-semibold">Plano Primium</h2>
                             <div className="flex items-center gap-3 justify-center">
-                                <span className="text-4xl">R$</span>
-                                <span className="font-semibold text-6xl">19</span>
-                                <div className="text-muted-foreground text-2xl">/mês</div>
+                                <span className="text-2xl md:text-4xl">R$</span>
+                                <span className="font-semibold text-4xl md:text-6xl">19</span>
+                                <div className="text-muted-foreground text-xl md:text-2xl">/mês</div>
                             </div>
                         </CardHeader>
                         <CardContent className="space-y-6 py-8">
                             <div className="flex items-center gap-2">
                                 <CheckIcon className="text-primary" />
-                                <p>Transações ilimitadas</p>
+                                <p className="text-sm md:text-base">Transações ilimitadas</p>
                             </div>
                             <div className="flex items-center gap-2">
                             <CheckIcon className="text-primary" />
-                                <p>Relatórios de IA</p>
+                                <p  className="text-sm md:text-base">Relatórios de IA</p>
                             </div>
                             <AcquirePlanButton />
                         </CardContent>

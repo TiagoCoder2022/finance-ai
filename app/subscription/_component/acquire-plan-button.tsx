@@ -27,7 +27,7 @@ const AcquirePlanButton = () => {
     if (hasPrimiumPlan) {
         return (
             <Button 
-                className="w-full rounded-full font-bold"               
+                className="text-sm md:text-base w-full rounded-full font-bold"               
                 variant="link"
             >
                 <Link href={`${process.env.NEXT_PUBLIC_STRIPE_CUSTOMER_PORTAL_URL as string}?prefilled_email=${user.emailAddresses[0].emailAddress}`}>
@@ -38,7 +38,7 @@ const AcquirePlanButton = () => {
     }
     return ( 
         <Button 
-            className="w-full rounded-full font-bold"
+            className="text-sm md:text-base w-full rounded-full font-bold"
             onClick={handleAcquirePlanClick}            
         >
             Adiquirir Plano
