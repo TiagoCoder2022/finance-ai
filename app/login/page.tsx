@@ -6,40 +6,46 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 const LoginPage = async () => {
-    const { userId } =  await auth()
+  const { userId } = await auth();
 
-    if (userId) {
-        redirect("/")
-    }
-    return ( 
-        <div className="flex items-center justify-center h-full px-5">
-            
-            <div className="max-w-[500px] text-center sm:text-left">
-                <Image 
-                    src="/login.svg"  
-                    width={173} 
-                    height={39} 
-                    alt="Faça login" 
-                    className="mb-8 mx-auto sm:mx-0"
-                />
+  if (userId) {
+    redirect("/");
+  }
 
-                <h1 className="text-4xl font-bold mb-3">Bem-vindo!</h1>
+  return (
+    <div className="grid h-full lg:grid-cols-2">
+      <div className="mx-auto flex h-full max-w-[550px] flex-col items-center justify-center gap-4 p-8">
+        <Image
+          src={"/login.svg"}
+          width={173}
+          height={39}
+          alt="logo"
+          className="mb-8"
+        />
+        <h1 className="mb-3 text-center text-4xl font-bold">Bem-vindo</h1>
+        <p className="text-muted-foreground">
+          A Finance AI é uma plataforma de gestão financeira que utiliza IA para
+          monitorar suas movimentações, e oferecer insights personalizados,
+          facilitando o controle do seu orçamento.
+        </p>
+        <SignInButton>
+          <Button variant={"outline"}>
+            <LogInIcon className="mr-2" />
+            Fazer login ou criar conta
+          </Button>
+        </SignInButton>
+      </div>
 
-                <p className="mb-8 text-muted-foreground">
-                    A Finance AI é uma plataforma de gestão financeira que utiliza IA para 
-                    monitorar suas movimentações, e oferece insights personalizados,
-                    facilitando o controle de seu orçamento.
-                </p>
+      <div className="relative hidden h-full w-full lg:flex">
+        <Image
+          src={"/login.png"}
+          alt="Faça login"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
+  );
+};
 
-                <SignInButton>
-                    <Button variant="outline" className="w-full">
-                        <LogInIcon className="mr-2" />
-                        Fazer login ou criar conta
-                    </Button>
-                </SignInButton>
-            </div>
-        </div>
-     );
-}
- 
 export default LoginPage;
