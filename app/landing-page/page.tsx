@@ -1,7 +1,10 @@
+import Navbar from "./_components/navbar";
+
+
 const LandingPage = () => {
     return ( 
         <div>
-            <h1>Aqui irá a landing page do nosso Sass</h1>
+            <Navbar />
         </div>
      );
 }
