@@ -1,5 +1,6 @@
 import { Button } from "@/app/_components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
     {label: "Home", href: "#"},
@@ -37,17 +38,21 @@ const Navbar = () => {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             className="feather feather-menu mr-2 md:hidden"
                         >
                             <line x1="3" y1="12" x2="21" y2="12"></line>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
-                        <Button variant="outline" className="hidden md:inline-flex border border-white rounded-full px-6 font-medium">Log In</Button>
-                        <Button className="hidden md:inline-flex rounded-full font-medium">Sign Up</Button>
+                        <Link href={"/login"}>
+                            <Button variant="outline" className="hidden md:inline-flex border border-white rounded-full px-6 font-medium">Log In</Button>
+                        </Link>
+                        <Link href={"/login"}>
+                            <Button className="hidden md:inline-flex rounded-full font-medium">Sign Up</Button>
+                        </Link>
                     </div>
                 </div>
             </div>
