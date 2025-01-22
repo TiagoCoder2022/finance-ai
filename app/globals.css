@@ -79,3 +79,8 @@ body {
     @apply h-full bg-background text-foreground;
   }
 }
+
+.image-high-quality {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}

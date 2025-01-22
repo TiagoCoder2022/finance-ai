@@ -13,7 +13,7 @@ const PresentationPage = () => {
                     inteligência
                 </span>
             </h2>
-            <p className="max-w-2xl mx-auto text-muted-foreground text-center mt-6">
+            <p className="max-w-2xl mx-auto text-muted-foreground text-base md:text-lg text-center mt-6">
                 Tome decisões mais inteligentes e mantenha suas finanças sob controle com uma dashboard intuitiva e impulsionada por IA.
             </p>
             <div className="flex justify-center mt-6 lg:relative px-5">
