@@ -14,7 +14,7 @@ const Features = () => {
                         simplificado
                     </span>
                 </h2>
-                <p className="max-w-2xl mx-auto text-muted-foreground text-base text-center mt-6">
+                <p className="max-w-2xl mx-auto text-muted-foreground text-base md:text-lg text-center mt-6">
                     Tenha uma visão clara das suas finanças com recursos inteligentes que ajudam você a economizar, crescer e investir com confiança.
                 </p>
                 <div className="flex justify-center mt-12">
