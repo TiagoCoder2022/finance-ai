@@ -27,16 +27,18 @@ const Hero = () => {
                     Gerencie suas receitas, despesas e receba feedback inteligente sobre sua gestão financeira com nossa IA.                                      
                 </p>                
 
-                <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
-                    <input 
-                        type="email"  
-                        placeholder="Enter your email" 
-                        className="bg-transparent px-4 rounded-full flex-1 outline-none focus:ring-0 focus:outline-none"
-                    />
-                    <Link href="/login">
-                        <Button type="submit" className="rounded-full">Sign Up</Button>
-                    </Link>
-                </form>
+                <div className="px-5">
+                    <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
+                        <input 
+                            type="email"  
+                            placeholder="Enter your email" 
+                            className="bg-transparent px-4 rounded-full flex-1 outline-none focus:ring-0 focus:outline-none"
+                        />
+                        <Link href="/login">
+                            <Button type="submit" className="rounded-full">Sign Up</Button>
+                        </Link>
+                    </form>
+                </div>
             </div>
         </section>
      );
