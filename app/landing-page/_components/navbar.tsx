@@ -8,9 +8,9 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
-    {label: "Home", href: "#"},
-    {label: "Features", href: "#features"},
-    {label: "Integrations", href: "#integrations"},
+    {label: "Início", href: "#home"},
+    {label: "Funcionalidades", href: "#features"},
+    {label: "Assinaturas", href: "#plans"},
     {label: "FAQs", href: "#faqs"},
 ]
 
@@ -48,7 +48,7 @@ const Navbar = () => {
                             <Link href={"/login"}>
                                 <Button variant="outline" className="hidden md:inline-flex border border-white rounded-full px-6 font-medium">Dashboard</Button>
                             </Link>
-                            <Link href={"/login"}>
+                            <Link href={"#plans"}>
                                 <Button className="hidden md:inline-flex rounded-full font-medium">Get started</Button>
                             </Link>
                         </div>
