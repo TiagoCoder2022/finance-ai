@@ -9,11 +9,11 @@ import { slideInFromLeft, slideInFromRight } from "@/app/utils/motion";
 
 const Hero = () => {
     return ( 
-        <section className="py-20 xl:py-36">
+        <section className="py-20 xl:py-36" id="home">
             <motion.div
                 initial="hidden"
                 animate="visible"
-                className="max-w-5xl container mx-auto relative"
+                className=" flex flex-col justify-center max-w-5xl container mx-auto relative"
             > 
                 <motion.div
                     variants={slideInFromLeft(0.2)} 
@@ -27,15 +27,18 @@ const Hero = () => {
                 >
                     <Pointer name="Bryan" color="red"/>
                 </motion.div>              
-                <div                    
-                    className="flex justify-center"
+                <motion.div 
+                    variants={slideInFromLeft(0.5)}                    
+                    className="max relative group text-center mx-auto"
                 >
-                    <motion.div 
-                    variants={slideInFromLeft(0.5)}
-                    className="inline-flex py-1 px-3 bg-gradient-to-r from-lime-400 to-lime-900 rounded-full text-neutral-950 font-semibold">
-                    🚀 Gestão financeira simplificada
-                    </motion.div>
-                </div>
+                    <div                       
+                        className="absolute -inset-0.5 bg-gradient-to-r from-lime-400 to-lime-700 blur rounded-full opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div >
+                    <div                        
+                        className="relative inline-flex py-1 px-3 bg-gradient-to-r from-lime-400 to-lime-900 rounded-full text-neutral-950 font-semibold"
+                    >
+                        🚀 Gestão financeira simplificada
+                    </div>                    
+                </motion.div>
 
                 <motion.h1
                     variants={slideInFromLeft(0.8)} 
