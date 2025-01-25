@@ -1,6 +1,9 @@
+"use client"
 import { PlusIcon } from "lucide-react";
 import Tag from "./tag";
 import { twMerge } from "tailwind-merge";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
     {
@@ -27,9 +30,9 @@ const faqs = [
 
 
 const Faqs = () => {
-    const selectedIndex = 0 
+    const [selectedIndex, setSelectedIndex] = useState(0) 
     return ( 
-        <section className="py-24 px-5">
+        <section className="py-24 px-5" id="faqs">
             <div>
                 <div className="flex justify-center">
                     <Tag>FAQs</Tag>
@@ -44,13 +47,23 @@ const Faqs = () => {
                 <div className="flex flex-col pag-6 max-w-2xl mx-auto mt-12">
                     {faqs.map((faq, faqIndex) => (
                         <div key={faq.question} className="bg-neutral-900 rounded-2xl border border-white/10 p-6 mt-8">
-                            <div className="flex justify-between items-center cursor-pointer">
+                            <div className="flex justify-between items-center cursor-pointer" onClick={() => setSelectedIndex(faqIndex)}>
                                 <h3 className="font-medium">{faq.question}</h3>
-                                <PlusIcon className={twMerge("text-lime-400", selectedIndex === faqIndex && "rotate-45")}/>
+                                <PlusIcon className={twMerge("text-lime-400 transition duration-300", selectedIndex === faqIndex && "rotate-45")}/>
                             </div>
-                            <div className={twMerge("mt-6", selectedIndex !== faqIndex && "hidden")}>
-                                <p className="text-white/50">{faq.answer}</p>
-                            </div>
+                            <AnimatePresence>
+                                {selectedIndex === faqIndex && (
+                                    <motion.div
+                                        initial={{ height: 0, marginTop: 0 }}
+                                        animate={{ height: 'auto', marginTop: 24 }}
+                                        exit={{  height: 0, marginTop: 0 }}
+                                        
+                                        className={twMerge("overflow-hidden")}                                     
+                                    >
+                                        <p className="text-white/50">{faq.answer}</p>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     ))}
                 </div>
