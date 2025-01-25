@@ -3,12 +3,12 @@ import FeatureCards from "./feature-cards";
 
 const Features = () => {
     return ( 
-        <section className="py-24 flex justify-center">
+        <section className="py-24 flex justify-center" id="features">
             <div className="container px-5">
                 <div className="flex justify-center">
                     <Tag>AI Powered Features</Tag>
                 </div>
-                <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
+                <h2 className="text-4xl md:text-5xl font-medium text-center mt-6 max-w-2xl mx-auto">
                     Controle financeiro{" "} 
                     <span className="bg-gradient-to-r from-lime-400 to-lime-700 text-transparent bg-clip-text">
                         simplificado
