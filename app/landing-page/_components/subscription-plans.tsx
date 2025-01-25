@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const SubscriptionPlans = () => {
     return ( 
-        <section className="py-24 px-5">
+        <section className="py-24 px-5" id="plans">
             <div className="text-center">
                 <Tag>Assinaturas</Tag>
             </div>
-            <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-medium text-center mt-6 max-w-2xl mx-auto">
             Planos flexíveis para{" "} 
                 <span className="bg-gradient-to-r from-lime-400 to-lime-700 text-transparent bg-clip-text">
                     você
