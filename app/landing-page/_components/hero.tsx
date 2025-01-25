@@ -9,7 +9,7 @@ import { slideInFromLeft, slideInFromRight } from "@/app/utils/motion";
 
 const Hero = () => {
     return ( 
-        <section className="py-20">
+        <section className="py-20 xl:py-36">
             <motion.div
                 initial="hidden"
                 animate="visible"
