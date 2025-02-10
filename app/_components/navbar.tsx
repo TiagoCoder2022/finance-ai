@@ -26,9 +26,9 @@ const Navbar = () => {
             <nav className="hidden lg:flex justify-between px-8 py-4 border-b border-solid">
                 <div className="flex items-center gap-10">
                     <Image src="/login.svg" alt="Finance AI" width={173} height={39} />
-                    <Link href="/" 
+                    <Link href="/dashboard" 
                         className={
-                            pathname === "/" ? "text-primary font-bold" : "text-muted-foreground"
+                            pathname === "/dashboard" ? "text-primary font-bold" : "text-muted-foreground"
                         }
                     >
                         Dashboard
@@ -91,9 +91,9 @@ const Navbar = () => {
                                 asChild
                             >
                                 <Link 
-                                    href="/" 
+                                    href="/dashboard" 
                                     className={
-                                        pathname === "/" ? "text-primary font-bold" : "text-muted-foreground"
+                                        pathname === "/dashboard" ? "text-primary font-bold" : "text-muted-foreground"
                                     }
                                 >  
                                     <TrendingUpIcon size={19} />

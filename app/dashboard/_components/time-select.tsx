@@ -22,7 +22,7 @@ const TimeSelect = () => {
     const searchParams = useSearchParams()
     const month = searchParams.get("month")
     const handleMonthChange = (month: string) => {
-        push(`/?month=${month}`)
+        push(`/dashboard?month=${month}`)
     }
     return ( 
         <Select onValueChange={(value) => handleMonthChange(value)} defaultValue={month ?? ''}>
