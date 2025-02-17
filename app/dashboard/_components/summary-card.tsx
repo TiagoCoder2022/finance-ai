@@ -19,7 +19,7 @@ const SummaryCard = ({icon, title, amount, size = 'small', userCanAddTransaction
                 {size === "large" && (<AddTransactionButton userCanAddTransaction={userCanAddTransaction} />)}
             </CardHeader>
             <CardContent>
-                <p className={`${size === "small" ? " text-base md:text-2xl" : "text-xl md:text-4xl"} font-bold`}>
+                <p className={`${size === "small" ? " text-sm md:text-2xl" : "text-xl md:text-4xl"} font-bold`}>
                     {Intl.NumberFormat("pt-BR", {
                         style: "currency", 
                         currency: "BRL"
