@@ -16,7 +16,7 @@ const LoginPage = async () => {
   return (
     <div className="grid h-full lg:grid-cols-2">
       <div className="mx-auto flex h-full max-w-[550px] flex-col items-center justify-center gap-4 p-8">
-        <Link href="/landing-page">
+        <Link href="/">
           <button className="border-2 border-white/50 text-muted-foreground rounded-full p-2 absolute top-4 left-4 hover:text-white hover:border-white transition duration-300">
             <ArrowLeftIcon />
           </button>
