@@ -2,9 +2,17 @@ import { Card, CardHeader, CardContent } from "@/app/_components/ui/card";
 import { CheckIcon, CreditCardIcon, HeadsetIcon, XIcon } from "lucide-react";
 import Tag from "./tag";
 import { Button } from "@/app/_components/ui/button";
-import Link from "next/link";
+import { SignInButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
-const SubscriptionPlans = () => {
+const SubscriptionPlans = async () => {
+    const { userId } = await auth();    
+    
+    if (userId) {
+        redirect("/subscription");
+    }
+
     return ( 
         <section className="py-24 px-5" id="plans">
             <div className="text-center">
@@ -41,9 +49,14 @@ const SubscriptionPlans = () => {
                                     <XIcon />
                                     <p className="text-sm md:text-base">Relatórios de IA</p>
                                 </div>
-                                <Link href="/login">
-                                    <Button variant="outline" className="w-full rounded-full mt-6">Adiquirir Plano</Button>
-                                </Link>
+                                <SignInButton>                                    
+                                    <Button 
+                                        variant="outline" 
+                                        className="w-full rounded-full mt-6"
+                                    >
+                                        Adquirir Plano
+                                    </Button>                                    
+                                </SignInButton>
                             </CardContent>
                         </Card>
                         <div className="inline-flex justify-center items-center text-center gap-2 mt-4">
@@ -56,7 +69,7 @@ const SubscriptionPlans = () => {
                     <div className="flex flex-col gap-4">
                         <Card className="w-[350px] md:w-[450px]">
                             <CardHeader className="border-b border-solid py-8 relative">                            
-                                <h2 className="text-center text-xl md:text-2xl font-semibold">Plano Primium</h2>
+                                <h2 className="text-center text-xl md:text-2xl font-semibold">Plano Premium</h2>
                                 <div className="flex items-center gap-3 justify-center">
                                     <span className="text-2xl md:text-4xl">R$</span>
                                     <span className="font-semibold text-4xl md:text-6xl">19</span>
@@ -69,12 +82,16 @@ const SubscriptionPlans = () => {
                                     <p className="text-sm md:text-base">Transações ilimitadas</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                <CheckIcon className="text-primary" />
-                                    <p  className="text-sm md:text-base">Relatórios de IA</p>
+                                    <CheckIcon className="text-primary" />
+                                    <p className="text-sm md:text-base">Relatórios de IA</p>
                                 </div>
-                                <Link href="/login">
-                                    <Button className="w-full rounded-full mt-6">Adiquirir Plano</Button>
-                                </Link>
+                                <SignInButton>                                    
+                                    <Button                                             
+                                        className="w-full rounded-full mt-6"
+                                    >
+                                        Adquirir Plano
+                                    </Button>                                    
+                                </SignInButton>
                             </CardContent>
                         </Card>
                         <div className="inline-flex justify-center items-center text-center gap-2 mt-4">
