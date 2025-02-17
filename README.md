@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SaaS de Gestão Financeira 📈📊
 
-## Getting Started
+![Image](https://github.com/user-attachments/assets/2dc11d9a-040a-413a-8f19-51f96bbcefcd)
 
-First, run the development server:
+🚀 Uma aplicação SaaS voltada para **gestão financeira**, oferecendo ferramentas para organização e insights valiosos através de **Inteligência Artificial**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔥 Funcionalidades
+- 📈 **Dashboard intuitivo** para visualizar seus dados financeiros
+- 🤖 **Geração de relatórios com IA** (OpenAI)
+- 🔐 **Autenticação segura** com Google via Clerk
+- 💳 **Pagamento integrado** via Stripe
+- 📊 **Gerenciamento de planos**:
+  - **Plano Inicial**: Acesso limitado para testar a aplicação
+  - **Plano Premium**: Acesso total a todas as funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Frontend**
+- ⚡ **Next.js** + **React.js**
+- 🎨 **Tailwind CSS** + **Shadcn/UI**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Backend**
+- 🏗 **Next.js API Routes** (Serverless Functions)
+- 🐘 **PostgreSQL**
+- 🛡 **Clerk** para autenticação
+- 🤖 **OpenAI** para geração de relatórios
+- 💳 **Stripe** para pagamentos
 
-## Learn More
+## 📌 Como Contribuir
+1. Faça um **fork** do projeto
+2. Crie uma **branch** com sua feature (`git checkout -b minha-feature`)
+3. Faça o commit (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Faça o push para a branch (`git push origin minha-feature`)
+5. Abra um **Pull Request**
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 Licença
+Este projeto está sob a licença MIT. Sinta-se à vontade para usá-lo e contribuir!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+💡 **Feedbacks são bem-vindos!** Se tiver alguma sugestão ou quiser saber mais sobre o projeto, entre em contato! 🚀
