@@ -4,27 +4,27 @@
 
 🚀 Uma aplicação SaaS voltada para **gestão financeira**, oferecendo ferramentas para organização e insights valiosos através de **Inteligência Artificial**.
 
-## 🔥 Funcionalidades
-- 📈 **Dashboard intuitivo** para visualizar seus dados financeiros
-- 🤖 **Geração de relatórios com IA** (OpenAI)
-- 🔐 **Autenticação segura** com Google via Clerk
-- 💳 **Pagamento integrado** via Stripe
-- 📊 **Gerenciamento de planos**:
-  - **Plano Inicial**: Acesso limitado para testar a aplicação
-  - **Plano Premium**: Acesso total a todas as funcionalidades
+## 🚀 Tecnologias Utilizadas
 
-## 🛠 Tecnologias Utilizadas
+- **Next.js** + **React.js** – Frontend e SSR
+- **TypeScript** – Tipagem estática e segurança no código
+- **Prisma** – ORM para manipulação eficiente do PostgreSQL
+- **PostgreSQL** – Banco de dados relacional
+- **Stripe** – Integração de pagamentos
+- **Clerk** – Autenticação e gerenciamento de usuários
+- **Google Auth** – Login via Google
+- **OpenAI** – Geração de relatórios inteligentes
+- **TailwindCSS** + **ShadCN/UI** – UI moderna e estilizada
 
-### **Frontend**
-- ⚡ **Next.js** + **React.js**
-- 🎨 **Tailwind CSS** + **Shadcn/UI**
+## 📌 Funcionalidades
 
-### **Backend**
-- 🏗 **Next.js API Routes** (Serverless Functions)
-- 🐘 **PostgreSQL**
-- 🛡 **Clerk** para autenticação
-- 🤖 **OpenAI** para geração de relatórios
-- 💳 **Stripe** para pagamentos
+✔️ **Dashboard interativa**  
+✔️ **Cadastro e categorização de transações**  
+✔️ **Geração de relatórios inteligentes via OpenAI**  
+✔️ **Autenticação segura com Google**  
+✔️ **Sistema de planos**:
+   - **Plano Inicial**: acesso limitado como demonstração  
+   - **Plano Premium**: acesso total a todas as funcionalidades
 
 ## 📌 Como Contribuir
 1. Faça um **fork** do projeto
